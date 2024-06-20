@@ -86,3 +86,31 @@ void Card::showInfo()
 	cout << "| \t Cash:     " << cash<< endl;
 	cout << "+----------------------------------------------------+\n";
 }
+
+void Card::topupCash(int pin, double mony)
+{
+	if (pin=PIN)
+	{
+		cash += mony;
+	}
+	else
+	{
+		cout << "PIN Error\n";
+	}
+}
+
+void Card::withdrawCash(int pin, double money)
+{
+	if (pin != PIN)
+	{
+		cout << "PIN Error\n";
+	}
+	else if (money>cash)
+	{
+		cout << "Error cash is not enowgh\n";
+	}
+	else
+	{
+		cash -= money;
+	}
+}
