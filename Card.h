@@ -16,6 +16,15 @@ public:
 	Card(const char* name, double cash);
 	~Card();
 
+	unsigned long getcardNumber();
+	const char* getName();
+	void setExpiredDate(const char* date);
+	const char* getExpiredDate();
+	void setPIN(int oldPIN, int newPIN);
+	int getPIN();
+
+	double getCash();
+
 	void showInfo();
 };
 
